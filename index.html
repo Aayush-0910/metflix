@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metflix - Find Your Next Watch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Metflix</a>
+            <nav>
+                <a href="index.html" class="active">Search</a>
+                <a href="library.html">My Library</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="search-section">
+            <div class="container">
+                <h1>Find Movies & TV Shows</h1>
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Search for a title..." autocomplete="off">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </section>
+
+        <section id="results-section">
+            <div class="container">
+                <div id="results-grid">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="details-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
