@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search for movies and TV shows to add to your personal watchlist.">
     <title>Metflix - Find Your Next Watch</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -19,27 +20,33 @@
     </header>
 
     <main>
-        <section id="search-section">
-            <div class="container">
-                <h1>Find Movies & TV Shows</h1>
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1>Unlimited movies, TV shows, and more.</h1>
+                <p>Search for any title to get started.</p>
                 <form id="search-form">
+                    <label for="search-input" class="sr-only">Search for a title</label>
                     <input type="text" id="search-input" placeholder="Search for a title..." autocomplete="off">
-                    <button type="submit"><i class="fas fa-search"></i></button>
+                    <button type="submit">
+                        <span>Search</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </form>
             </div>
         </section>
 
-        <section id="results-section">
-            <div class="container">
-                <div id="results-grid">
-                    </div>
-            </div>
+        <section id="results-section" class="movie-rows-container">
+            <!-- Movie rows will be populated here by JavaScript -->
         </section>
     </main>
 
-    <div id="details-modal" class="modal-overlay hidden">
+    <div id="details-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
-            </div>
+            <h2 id="modal-title" class="sr-only">Movie Details</h2>
+            <!-- Modal content will be populated here by JavaScript -->
+        </div>
     </div>
 
     <script src="js/main.js"></script>
