@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
     const watchlistGrid = document.getElementById('watchlist-grid');
     const completedGrid = document.getElementById('completed-grid');
 
@@ -15,11 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         movieList.forEach(movie => {
             const movieCard = document.createElement('div');
             movieCard.classList.add('movie-card');
+            // In the demo version, poster_path is the full URL
             movieCard.innerHTML = `
-                <img src="${IMAGE_BASE_URL}${movie.poster_path}" alt="${movie.title || movie.name}">
-                <div class="movie-card-title">${movie.title || movie.name}</div>
+                <img src="${movie.poster_path}" alt="${movie.title || movie.name}">
             `;
-            // Optional: Add click to remove functionality here if desired
+            // In a full version, you might want a click event to show details or remove
             container.appendChild(movieCard);
         });
     };

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your personal movie and TV show library. Track what you plan to watch and what you've completed.">
     <title>My Library - Metflix</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -18,20 +20,22 @@
     </header>
 
     <main>
-        <section id="library-section">
+        <section id="library-section" class="library-header">
             <div class="container">
                 <h1>My Library</h1>
                 
                 <div class="watchlist">
                     <h2>Plan to Watch</h2>
                     <div id="watchlist-grid" class="results-grid">
-                        </div>
+                        <!-- "Plan to Watch" items will be populated here by JavaScript -->
+                    </div>
                 </div>
                 
                 <div class="watchlist">
                     <h2>Completed</h2>
                     <div id="completed-grid" class="results-grid">
-                        </div>
+                        <!-- "Completed" items will be populated here by JavaScript -->
+                    </div>
                 </div>
 
             </div>
